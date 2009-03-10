@@ -2,6 +2,34 @@ package Email::MIME::Kit::KitReader::SWAK;
 use Moose;
 with 'Email::MIME::Kit::Role::KitReader';
 
+=head1 DESCRIPTION
+
+This replaces and extends the standard (Dir) kit reader for Email::MIME::Kit,
+letting your kit refer to resources in locations other than the kit itself.
+
+In your manifest (assuming it's YAML, for readability):
+
+  ---
+  kit_reader: SWAK
+  attachments:
+  - type: text/html
+    path: template.html
+
+  - type: text/plain
+    path: /dist/Your-App/config.conf
+
+  - type: text/plain
+    path: /fs/etc/motd
+
+This will find the first file in the kit (the absolute path prefix F</kit>
+could also be used), the second file in the L<File::ShareDir|File::ShareDir>
+shared dist space for the Your-App, and the third file on the root filesystem.
+
+SWAK may be given a C<fs_root> option to start the contents of F</fs> somewhere
+other than root.
+
+=cut
+
 use Path::Resolver::Resolver::Mux::Prefix;
 use Path::Resolver::Resolver::FileSystem;
 use Path::Resolver::Resolver::AnyDist;
