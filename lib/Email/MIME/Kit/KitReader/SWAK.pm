@@ -36,7 +36,8 @@ use Path::Resolver::Resolver::FileSystem;
 use Path::Resolver::Resolver::AnyDist;
 
 has resolver => (
-  is       => 'ro',
+  reader   => 'resolver',
+  writer   => '_set_resolver',
   does     => 'Path::Resolver::Role::Resolver',
   init_arg => undef,
   lazy     => 1,
