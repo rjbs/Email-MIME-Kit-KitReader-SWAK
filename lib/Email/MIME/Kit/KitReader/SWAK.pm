@@ -73,7 +73,7 @@ has fs_root => (
 sub get_kit_entry {
   my ($self, $path) = @_;
 
-  my $content = $self->resolver->content_for($path);
+  my $content = $self->resolver->entity_at($path)->content_ref;
   return $content if $content;
 
   confess "no content for $path";
