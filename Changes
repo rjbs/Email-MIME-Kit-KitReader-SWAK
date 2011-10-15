@@ -1,5 +1,8 @@
 Revision history for Email-MIME-Kit-KitReader-SWAK
 
+{{$NEXT}}
+          repackage to get META.yml
+
 1.093060  2009-11-02
           require and rely on the newer form of Path::Resolver entities
 
