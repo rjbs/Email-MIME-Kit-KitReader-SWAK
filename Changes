@@ -2,6 +2,9 @@ Revision history for Email-MIME-Kit-KitReader-SWAK
 
 {{$NEXT}}
 
+1.093062  2013-08-12 21:47:16 America/New_York
+          update bugtracker and repo metadata
+
 1.093061  2011-10-15 18:07:14 Asia/Tokyo
           repackage to get META.yml
 
