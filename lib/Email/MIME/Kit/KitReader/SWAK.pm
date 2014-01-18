@@ -1,7 +1,8 @@
 package Email::MIME::Kit::KitReader::SWAK;
+# ABSTRACT: the swiss army knife of EMK kit readers
+
 use Moose;
 with 'Email::MIME::Kit::Role::KitReader';
-# ABSTRACT: the swiss army knife of EMK kit readers
 
 =head1 DESCRIPTION
 
